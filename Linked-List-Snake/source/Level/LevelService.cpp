@@ -1,5 +1,7 @@
 #include "Level/LevelService.h"
 #include "Level/LevelController.h"
+#include "Global/ServiceLocator.h"
+#include "Level/LevelModel.h"
 
 namespace Level
 {
