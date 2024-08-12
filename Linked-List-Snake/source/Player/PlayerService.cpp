@@ -1,21 +1,25 @@
 #include "Player/PlayerService.h"
+namespace Player 
+{
 
-Player::Player() {
-    // SampleClass's default constructor
-}
+        PlayerService::PlayerService() {
+            // SampleClass's default constructor
+        }
 
-Player::~Player() {
-    // SampleClass's destructor
-}
+        PlayerService::~PlayerService() {
+            // SampleClass's destructor
+        }
 
-void Player::initialize() {
-    // To be called when the object is created
-}
+        void PlayerService::initialize() {
+            // To be called when the object is created
+        }
 
-void Player::update() {
-    // To be called on every frame
-}
+        void PlayerService::update() {
+            // To be called on every frame
+        }
 
-void Player::render() {
-    // To be called on every frame
+        void PlayerService::render() {
+            // To be called on every frame
+        }
+    
 }

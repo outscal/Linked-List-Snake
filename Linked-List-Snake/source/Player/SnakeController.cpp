@@ -1,21 +1,25 @@
 #include "Player/SnakeController.h"
+namespace Player {
 
-Player::Player() {
-    // SampleClass's default constructor
-}
 
-Player::~Player() {
-    // SampleClass's destructor
-}
 
-void Player::initialize() {
-    // To be called when the object is created
-}
+    SnakeController::SnakeController() {
+        // SampleClass's default constructor
+    }
 
-void Player::update() {
-    // To be called on every frame
-}
+    SnakeController:: ~SnakeController() {
+        // SampleClass's destructor
+    }
 
-void Player::render() {
-    // To be called on every frame
+    void SnakeController::initialize() {
+        // To be called when the object is created
+    }
+
+    void SnakeController::update() {
+        // To be called on every frame
+    }
+
+    void SnakeController::render() {
+        // To be called on every frame
+    }
 }

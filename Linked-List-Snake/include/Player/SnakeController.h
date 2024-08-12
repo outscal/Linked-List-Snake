@@ -1,11 +1,19 @@
 #pragma once
-class Player {
-public:
-    Player();  // Default constructor
-    ~Player(); // Destructor
+namespace Player {
 
-    void initialize(); // To be called when the object is created
-    void update();     // To be called on every frame
-    void render();     // To be called on every frame
-};
 
+    enum class SnakeState
+    {
+        ALIVE,
+        DEAD,
+    };
+    class SnakeController {
+    public:
+        SnakeController();  // Default constructor
+        ~SnakeController(); // Destructor
+
+        void initialize(); // To be called when the object is created
+        void update();     // To be called on every frame
+        void render();     // To be called on every frame
+    };
+}
