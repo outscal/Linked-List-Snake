@@ -1,15 +1,25 @@
 #pragma once
-namespace Player {
 
+namespace Player
+{
+	class SnakeController;
 
-    class PlayerService {
-    public:
-        PlayerService();  // Default constructor
-        ~PlayerService(); // Destructor
+	class PlayerService
+	{
+	private:
+		SnakeController* snake_controller;
 
-        void initialize(); // To be called when the object is created
-        void update();     // To be called on every frame
-        void render();     // To be called on every frame
-    };
+		void createController();
+		void destroy();
+
+	public:
+		PlayerService();
+		~PlayerService();
+
+		void initialize();
+		void update();
+		void render();
+
+		void spawnPlayer();
+	};
 }
-
