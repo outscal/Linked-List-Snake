@@ -38,12 +38,13 @@ namespace Level
 
 	float LevelView::getGridWidth()
 	{
-		return 0.0f;
+		return grid_width;
 	}
 
 	float LevelView::getGridHeight()
 	{
-		return 0.0f;
+		return grid_height; 
+
 	}
 
 	void LevelView::initializeBorder()
@@ -60,6 +61,10 @@ namespace Level
 
 	void LevelView::calculateGridExtents()
 	{
+		sf::RenderWindow* game_window = ServiceLocator::getInstance()->getGraphicService()->getGameWindow();
+
+		grid_width = game_window->getSize().x - 2 * border_offset_left;
+		grid_height = game_window->getSize().y - 2 * border_offset_top;
 	}
 
 	void LevelView::initializeBackground()
