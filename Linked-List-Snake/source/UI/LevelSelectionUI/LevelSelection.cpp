@@ -7,6 +7,7 @@
 #include "UI/UIElement/ImageView.h"
 #include "Global/Config.h"
 #include "Level/LevelService.h"
+#include<iostream>
 namespace UI
 {
 	using namespace UIElement;
@@ -29,6 +30,7 @@ namespace UI
 		{
 			initializeBackgroundImage();
 			initializeButtons();
+			registerButtonCallback();
 		}
 		void LevelSelectionUI::update()
 		{
@@ -92,12 +94,14 @@ namespace UI
 		}
 		void LevelSelectionUI::levelOneButtonCallback()
 		{
+			std::cout << "LevelOne";
 			ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
 			GameService::setGameState(GameState::GAMEPLAY);
 			ServiceLocator::getInstance()->GetLevelServices()->createLevel(Level::LevelNumber::ONE);
 		}
 		void LevelSelectionUI::levelTwoButtonCallback()
 		{
+
 			ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::BUTTON_CLICK);
 			GameService::setGameState(GameState::GAMEPLAY);
 			ServiceLocator::getInstance()->GetLevelServices()->createLevel(Level::LevelNumber::TWO);
