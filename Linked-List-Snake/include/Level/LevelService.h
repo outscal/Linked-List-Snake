@@ -11,6 +11,7 @@ namespace Level {
 		void Initialize();
 		void Update();
 		void Render();
+		void SpawPlayer();
 		~LevelService();
 		void createLevel(LevelNumber level_to_load);
 	};
