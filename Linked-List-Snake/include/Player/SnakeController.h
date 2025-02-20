@@ -1,4 +1,6 @@
 #pragma once
+#include<SFML/Graphics.hpp>
+#include"Player/Direction.h"
 namespace Player {
 	
 		enum class SnakeState
@@ -6,9 +8,15 @@ namespace Player {
 			ALIVE,
 			DEAD,
 		};
+
+		
 	class SnakeController {
+	private:
 		const int snakeLength = 10;
 		SnakeState currentsnakeSate;
+		const sf::Vector2i defaultPosition = sf::Vector2i(25, 13);
+	const Direction defaultDirection = Direction::RIGHT;
+	Direction currentSnakeDirection;
 	public:
 		SnakeController();
 		void Intialize();
